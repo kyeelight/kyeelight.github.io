@@ -53,7 +53,7 @@ ul {
 .tr {
   text-align: right;
 }
-.title-sub {
+.title-h1, .title-sub {
   text-align: left;
   border-bottom: 1px solid #EEE;
   padding-left: 0.5em;
@@ -64,9 +64,17 @@ ul {
     color: #999;
   }
 }
+.title-h1 {
+  margin: 28px 0;
+  padding: 0 0 8px;
+  text-align: center;
+}
 
 .wrap {
-  margin-top: 4em;
+  // margin-top: 4em;
+  width: 92%;
+  max-width: 1020px;
+  margin: 4em auto;
 }
 
 /*
@@ -233,49 +241,17 @@ a.pure-button-primary {
   font-size: 1.25em;
 }
 
-
-// .jscroll {
-//   position: relative;
-//   border: 1px solid red;
-//   width: 76%;
-//   margin: 4em auto;
-//   overflow: hidden;
-//   .ctrl {
-//     position: absolute;
-//     top: 0;
-//     height: 100%;
-//     z-index: 1;
-//     cursor: pointer;
-//     transition: all .2s ease-in 0s
-//   }
-//   #prev {
-//     left: 0;
-//     width: 150px;
-//     &:before {
-//       // content: '>>>'
-//     }
-//   }
-
-//   #next {
-//     right: 0;
-//   }
-//   &:hover .ctrl { background: rgba(255, 255, 255, 0.5); }
-//   .list {
-//     overflow: hidden; 
-//     .item {float: left;}
-//   }
-// }
-
 .jscroll {
     position: relative;
     margin: 2em;
 }
 .jscroll ul {
   margin: 0;
+  list-style: none;
 }
 .jscroll .ctrl {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     cursor: pointer;
     transition: all .2s ease-in 0s
 }
@@ -294,35 +270,36 @@ a.pure-button-primary {
     // background-repeat: no-repeat
 }
 #mscroll {
-    width: 720px;
+    width: 400px;
     // padding: 0 30px;
-    height: 330px;;
+    height: 300px;;
     border-style: solid;
     border-color: #EEE;
-    border-width: 0 1px 1px
+    border-width: 1px 1px 1px;
 }
 #mscroll .o-list {
     position: relative;
-    width: 720px;
-    height: 330px;;
+    width: 400px;
+    height: 300px;;
     overflow: hidden;
     zoom: 1
 }
 #mscroll .list {
     position: relative;
-    width: 720px;
-    height: 330px;
+    width: 400px;
+    height: 300px;
 }
 // #mscroll .list li {
 //     border-right: 1px solid #EEE
 // }
 #mscroll .list img {
-    width: 720px;
+    width: 398px;
+    height: 298px;
 }
 #mscroll .ctrl {
     top: 0;
     width: 45px;
-    height: 330px;
+    height: 300px;
 }
 #mscroll .ctrl b {
     display: block;
@@ -341,24 +318,12 @@ a.pure-button-primary {
     b:before{
       content: '‹'
     }
-    // &:hover b{
-    //   &:before {
-    //     color: red;
-    //     content: '‹‹'
-    //   }
-    // }
 }
 #mscroll #next {
     right: -2px;
     b:before {
       content: '›'
     }
-    // &:hover b{
-    //   &:before {
-    //     color: red;
-    //     content: '››'
-    //   }
-    // }
 }
 #mscroll #prev b {
     background-position: -85px -45px
@@ -367,45 +332,24 @@ a.pure-button-primary {
     background-position: -55px -45px
 }
 #mscroll .ctrl:hover {
+  background: #F5F5F5;
   b {color: red;}
-  // background-color: rgba(255, 255, 255, 0.5);
 }
-// #mscroll #prev:hover b {
-//     background: url(http://misc.360buyimg.com/product/skin/2013/i/15.png) no-repeat 0 0
-// }
-// #mscroll #next:hover b {
-//     background: url(http://misc.360buyimg.com/product/skin/2013/i/15.png) no-repeat 0 -37px
-// }
+
 #mscroll .disabled {
     cursor: default
 }
 #mscroll:hover .disabled {}
 
-// .indexes {
-//     position: absolute;
-//     background-color: rgba(0,0,0,.6);
-//     bottom: 0;
-//     left: 0;
-//     right: -2px;
-//     color: red;
-//     width: 100%;
-//     text-align: center;
-//     height: 20px;
-//     background-color: #000;
-//     position: relative;
-//     bottom: 0;
-//     cursor: pointer
-// }
-
 .scroll-nav-wrap {
   position: absolute;
   height: 12px;
   bottom: 0;
-  left: 25%;
-  right: 25%;
-  background: rgba(255, 255, 255, 0.5);
+  left: 0;
+  right: 0;
+  background: #F8F8F8;
   text-align: center;
-  z-index: 999;
+  z-index: 1;
   em {
     display: inline-block;
     text-indent:-9999px;
@@ -413,12 +357,28 @@ a.pure-button-primary {
     margin: 2px;
     width: 8px;
     height: 8px;
-    background: #FFF;
+    background: #999;
 
   }
   .current {
     background: red;
     border-color: red;
+  }
+}
+
+
+
+.body {
+  margin: 1em auto;
+  li{
+    // line-height: 28px;
+    list-style: none;
+    line-height: 2em;
+    &:before{
+      font-size: 1.25em;
+      content: "› ";
+      padding-right: 3px;
+    }
   }
 }
 
