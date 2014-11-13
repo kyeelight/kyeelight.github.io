@@ -62,8 +62,38 @@ input[type="text"], select {
   margin-bottom: 1em;
   padding-bottom: 1em;
   border-bottom: 1px solid #EEE;
-  img {
+  // img {
+  //   width: 15%;
+  // }
+  .thumb{
+    position: relative;
     width: 15%;
+    margin: 5px;
+    border: 1px solid #EEE;
+    display: inline-block;
+    img{
+      width: 100%;
+    }
+    .del{
+      position: absolute;
+      display: none;
+      top: 3px;
+      right: 3px;
+      padding: 2px 6px;
+      border: 1px solid #EEE;
+      background-color: #F5F5F5;
+      color: red;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1em;
+      opacity: 0.75;
+    }
+    &:hover .del{
+      display: block;
+      &:hover{
+        border-color: red;
+      }
+    }
   }
 }
 .tags, .marks, .desc {
