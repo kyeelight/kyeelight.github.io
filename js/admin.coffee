@@ -1,5 +1,5 @@
 $ ->
-  $tags = $('#tags')
+  $tags = $('#tags, #marks')
   $images  = $ '#images'
   if $tags[0]
     $tags.tagsInput
