@@ -33,7 +33,7 @@ $(function() {
         })()).join(''));
       });
     });
-    return $('#sort').on('click', function() {
+    $('#sort').on('click', function() {
       return $.post("/admin/lights/" + name, {
         imgs: $.map($images.find('img'), function(e) {
           return e.alt;
@@ -43,4 +43,11 @@ $(function() {
       });
     });
   }
+  return $('#add-project').on('click', function() {
+    var $newItem, $projects;
+    $projects = $('#projects');
+    $newItem = $projects.find('.item:first').clone();
+    $newItem.find('h2').text('新项目');
+    return $newItem.appendTo($projects);
+  });
 });
