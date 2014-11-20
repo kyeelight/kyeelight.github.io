@@ -4,6 +4,7 @@ $(function() {
     dots: true
   });
   $('#menu-link').on('click', function() {
+    $(this).toggleClass('active');
     $('#head').toggleClass('active');
     return console.log('...');
   });

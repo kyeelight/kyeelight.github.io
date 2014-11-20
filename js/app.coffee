@@ -2,6 +2,7 @@ $ ->
   $('.slider').slick dots: true
   $('#menu-link').on 'click', ->
     # $('#menu').toggleClass 'active'
+    $(this).toggleClass 'active'
     $('#head').toggleClass 'active'
     console.log '...'
   # $('.thumb a').magnificPopup type: 'image'

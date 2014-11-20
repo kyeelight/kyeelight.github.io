@@ -109,53 +109,6 @@ hr {
 }
 
 
-.menu-toggle {
-  display: none;
-  position: absolute;
-  // position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 28px;
-  height: 27px;
-  cursor: pointer;
-  z-index: 10;
-  &:hover{
-    .line{
-      background-color: #FFF;
-    }
-  }
-}
-
-
-.menu-toggle .line {
-    width: 100%;
-    position: absolute;
-    top: 15px;
-    height: 1px;
-    background: #000;
-    // -webkit-transition: 0.6s cubic-bezier(0.65, 1.88, 0.4, 0.61);
-    // -moz-transition: 0.6s cubic-bezier(0.65, 1.88, 0.4, 0.61);
-    // -o-transition: 0.6s cubic-bezier(0.65, 1.88, 0.4, 0.61);
-    // -ms-transition: 0.6s cubic-bezier(0.65, 1.88, 0.4, 0.61);
-    // transition: 0.6s cubic-bezier(0.65, 1.88, 0.4, 0.61);
-}
-
-.menu-toggle .line:first-child {
-    -webkit-transform: translateY(-12px);
-    -moz-transform: translateY(-12px);
-    -o-transform: translateY(-12px);
-    -ms-transform: translateY(-12px);
-    transform: translateY(-12px)
-}
-
-.menu-toggle .line:last-child {
-    -webkit-transform: translateY(12px);
-    -moz-transform: translateY(12px);
-    -o-transform: translateY(12px);
-    -ms-transform: translateY(12px);
-    transform: translateY(12px)
-}
-
 
 .head {
   display: relative;
@@ -646,7 +599,6 @@ a.pure-button-primary {
   .wrap {
     width: 100%;
   }
-  .menu-toggle {display: block;}
   .head {
     .logo {
       width: 100%;
@@ -727,7 +679,7 @@ a.pure-button-primary {
     position: absolute;
     display: block; /* show this only on small screens */
     top: 18px;
-    right: 8px; /* "#menu width" */
+    right: 12px; /* "#menu width" */
     background: #000;
     background: rgba(0,0,0,0.25);
     font-size: 11px; /* change this value to increase/decrease button size */
