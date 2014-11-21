@@ -1,4 +1,5 @@
 $ ->
+  # $('.hs').slick dots: true
   $('.slider').slick dots: true
   $('#menu-link').on 'click', ->
     # $('#menu').toggleClass 'active'
